@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>1037a71d-5881-41a2-8e24-0be89839cb02</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Home\Privacy.cshtml" />
+    <Content Remove="wwwroot\img\successImg.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\img\big-truck.png" />
+    <None Include="wwwroot\img\cube.png" />
+    <None Include="wwwroot\img\list.png" />
+    <None Include="wwwroot\img\map.png" />
+    <None Include="wwwroot\img\pie-chart.png" />
+    <None Include="wwwroot\img\settings.png" />
+    <None Include="wwwroot\img\successImg.png" />
+    <None Include="wwwroot\img\undraw_posting_photo.svg" />
+    <None Include="wwwroot\img\undraw_profile.svg" />
+    <None Include="wwwroot\img\undraw_profile_1.svg" />
+    <None Include="wwwroot\img\undraw_profile_2.svg" />
+    <None Include="wwwroot\img\undraw_profile_3.svg" />
+    <None Include="wwwroot\img\undraw_rocket.svg" />
+    <None Include="wwwroot\img\web-browser.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="7.2.0" />
+  </ItemGroup>
+
+</Project>

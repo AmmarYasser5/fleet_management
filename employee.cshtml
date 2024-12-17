@@ -1,0 +1,112 @@
+@page
+@model AdminDashboard3.Views.Home.EmployeeModel
+
+<div class="employee-management">
+
+	@* Modals*@
+	<div class="modal edit">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Edit Employee</h5>
+				</div>
+				<div class="modal-body"></div>
+				<div class="modal-footer">
+					<button onclick="cancelForm('edit')" type="button" class="btn btn-secondary cancel" data-bs-dismiss="modal">cancel</button>
+					<button onclick="saveChanges()" type="button" class="btn btn-primary save">save</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal add">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Add Employee</h5>
+				</div>
+				<div class="modal-body">
+					<div class="card">
+						<div class="card-body">
+							<form>
+								<div>
+									<label for="nameInput">Name</label>
+									<input id="nameInput" type="text" />
+								</div>
+								<div>
+									<label for="vehicleInput">Vehicle ID</label>
+									<input id="vehicleInput" type="text" />
+								</div>
+								<div>
+									<label for="statusInput">Status</label>
+									<select id="statusInput">
+										<option value="available">available</option>
+										<option value="un-available">un-available</option>
+									</select>
+								</div>
+								<div>
+									<label for="priceInput">Price</label>
+									<input id = "priceInput" placeholder="$00.00" type="text"/>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button onclick="cancelForm('add')" type="button" class="btn btn-secondary cancel" data-bs-dismiss="modal">cancel</button>
+					<button onclick="addEmployee()" type="button" class="btn btn-primary add">add</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	@* end modals*@
+	<nav>
+		<h3 class="main-head">Employee Management</h3>
+		<button class="add-employee" onclick="showAddModal()">
+			<i class="fa-solid fa-user-plus"></i> Add Emplyee
+		</button>
+	</nav>
+	
+	<p class="para">
+		Employees are the backbone of any successful organization. 
+		Our employee management system is designed to empower, support, 
+		and optimize the workforce by fostering a positive work environment, 
+		enhancing productivity, and promoting professional growth. 
+		We value our team members and are committed to their well-being, recognizing that their dedication drives our success.
+	</p>
+
+	<div class="search-and-show">
+		<button onclick="search('all')" class="show-all">
+			<i class="fa-solid fa-arrow-down-short-wide filter-icon"></i>
+			<span>show all</span>
+		</button>
+
+		@* search bar *@
+		<div class="search-bar">
+			<input id="search" type="search" placeholder="search" />
+			<select>
+				<option value="name">Name</option>
+				<option value="status">Status</option>
+				<option value="price">price</option>
+			</select>
+			<i onclick="search('filter')" class="fa-solid fa-magnifying-glass search-icon"></i>
+		</div>
+
+
+	</div>
+	<div class="table section">
+		<div class="section-header">Employee Table</div>
+		<table>
+			<thead>
+				<tr>
+					<td>Name</td>
+					<td>Vehicle ID</td>
+					<td>Status</td>
+					<td>Price/hr</td>
+					<td>-</td>
+				</tr>
+			</thead>
+			<tbody></tbody>
+		</table>
+	</div>
+</div>

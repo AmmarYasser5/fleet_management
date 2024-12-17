@@ -1,0 +1,487 @@
+:root {
+    --main-color: #AF509B;
+    --second-main-color: #243145;
+    --third-main-color: #506BAF; 
+    --btn-color: #d5d9e0;
+    --head-color: #393939;
+}
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+/* components*/
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit !important;
+}
+
+a:hover {
+    color: inherit;
+}
+.main-head {
+    font-size: 23px;
+    color: var(--head-color);
+    margin: 20px;
+}
+.para {
+    margin: 20px;
+    font-size: 14px;
+}
+.section {
+    background-color: white;
+    border-radius: 12px;
+    margin: 20px 10px;
+    padding: 0 10px;
+    box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15) !important;
+    border: 1px solid #e3e6f0;
+}
+.section-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: #f8f9fc;
+    border-bottom: 1px solid #e3e6f0;
+}
+
+/* table */
+.table.section {
+    padding: 0;
+}
+table td.available {
+    color : green ; 
+}
+table td.un-available {
+    color: #cd0000 ; 
+}
+table button {
+    border: none;
+    background-color: transparent;
+}
+table i[class *= "trash"] {
+    color: #cd0000;
+}
+
+table i[class *= "pen"] {
+    color: #6b6b6b;
+}
+/*end table*/
+
+/* modal */
+/* end modal */
+.modal {
+    background-color: #0a0a0aa8;
+}
+
+.modal .modal-header {
+    font-family: auto;
+    border-bottom: solid 1px #d6d6d6;
+    background-color: var(--main-color);
+}
+
+.modal .modal-title {
+    color: white;
+    font-weight: bold;
+}
+
+.modal .modal-footer {
+    border-top: solid 1px #c2c2c2;
+}
+
+.modal .cancel {
+    background-color: #dbdbdb;
+    color: var(--main-color);
+}
+
+.modal .save, .modal .add {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+.modal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal label {
+    width: 100%;
+    color: var(--head-color);
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.modal input, .modal select {
+    border-radius: 8px;
+    padding: 6px;
+    border: solid 1px #adadad;
+    width: 100%;
+    font-size: 15px;
+}
+canvas {
+    width : 100% !important; 
+    max-height : 100% !important; 
+}
+/* header */
+
+header nav {
+    background-color: var(--main-color);
+}
+
+header a.navbar-brand {
+    font-size: 17px;
+}
+
+header a:not(.dropdown-item) {
+    color: white !important;
+}
+header .main-web-icon {
+    color : white ; 
+    margin-right : 5px ; 
+}
+header .navbar-collapse {
+    flex-grow : 0 ; 
+}
+header img {
+    margin-right : 10px ; 
+}
+header i {
+    font-size : 20px ; 
+}
+header .badge {
+    font-size : 80% ; 
+}
+
+/* sidebar*/
+#wrapper .sidebar i {
+    font-size: 15px;
+    color: #848484;
+}
+#wrapper ul.sidebar {
+    background-color: var(--third-main-color);
+    color: white;
+}
+#wrapper ul.sidebar li {
+    font-weight: 600;
+    font-size: 13px;
+}
+#wrapper ul.sidebar .nav-item a {
+    display: flex;
+    align-items : center ; 
+    gap: 18px;
+}
+
+#wrapper ul.sidebar li:hover {
+    background-color: #ffffff4d;
+    color: var(--main-color);
+}
+
+/* content */
+
+/* admin dashboard */
+/* navbar */
+#wrapper .admin-dashboard .navbar {
+    width: 108%;
+    margin-left: -24px;
+}
+#wrapper .admin-dashboard .navbar h1 {
+    font-size: 21px;
+    color: var(--head-color);
+    font-weight: bold;
+    margin-right: 35px;
+    position: relative;
+}
+#wrapper .admin-dashboard .navbar h1::after {
+    content: "";
+    position: absolute;
+    top: -20px;
+    right: -13px;
+    background-color: #e2e2e2;
+    width: 1px;
+    height: 73px;
+}
+#wrapper .admin-dashboard .navbar select {
+    border: solid 1px #d0d0d0;
+    padding: 1px 7px;
+    font-size: 14px;
+    border-radius: 2px;
+}
+#wrapper .admin-dashboard .navbar select:focus {
+    border: solid 1px #d0d0d0;
+    outline: none;
+}
+#wrapper .admin-dashboard .navbar option:hover {
+    background-color: red;
+}
+/* end navbar*/
+/*expenses and profit*/
+
+#wrapper .admin-dashboard .expensesAndProfit ul {
+    display :grid ; 
+    grid-template-columns : 1fr 1fr 1fr 1fr ; 
+    gap : 10px ; 
+    margin-bottom : 20px ; 
+}
+#wrapper .admin-dashboard .expensesAndProfit li {
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content : space-between ; 
+    gap: 20px;
+    padding: 10px;
+}
+#wrapper .admin-dashboard .expensesAndProfit .content h3 {
+    color: var(--head-color);
+    font-size: 17px;
+    font-weight: bold;
+}
+#wrapper .admin-dashboard .expensesAndProfit .content p {
+    font-size : 12px ; 
+    margin : 0 ;
+}
+#wrapper .admin-dashboard .expensesAndProfit i {
+    color: var(--main-color);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #0c8a7221;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* end expenses and profit*/
+
+/*charts*/
+#wrapper .admin-dashboard .charts {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+#wrapper .admin-dashboard .charts .card-header {
+    display: flex;
+    justify-content: space-between
+}
+#wrapper .admin-dashboard .charts h6 {
+    color : var(--head-color) ; 
+}
+#wrapper .admin-dashboard .charts .time {
+    display: flex;
+    padding: 1px 11px;
+    gap: 17px;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 3px;
+    border: solid 1px #bdbdbd;
+}
+#wrapper .admin-dashboard .charts .time div {
+    position : relative ; 
+}
+#wrapper .admin-dashboard .charts .time .year {
+    color : var(--main-color) ; 
+}
+#wrapper .admin-dashboard .charts .time div:not(.year)::after {
+    content: '';
+    position: absolute;
+    top: -1px;
+    right: -9px;
+    width: 1px;
+    height: 18px;
+    background-color: #b5b5b5;
+}
+
+/*pie chart*/
+#wrapper .admin-dashboard .charts ul.pieChart-data li{
+    position : relative ; 
+}
+#wrapper .admin-dashboard .charts ul.pieChart-data li::after {
+    content : '' ; 
+    position: absolute;
+    top : 0 ; 
+    left : 0 ; 
+    width : 3px ; 
+    height : 70% ; 
+}
+#wrapper .admin-dashboard .charts ul.pieChart-data li.maintenance::after {
+    background-color: #469f8b ; 
+}
+#wrapper .admin-dashboard .charts ul.pieChart-data li.labourCost::after {
+    background-color: #55bf95;
+}
+#wrapper .admin-dashboard .charts ul.pieChart-data li.fuel::after {
+    background-color: #c1e49a;
+}
+#wrapper .admin-dashboard .charts ul.pieChart-data li.other::after {
+    background-color: #fcb953;
+}
+
+/*end charts*/
+/*end admin dashboard*/
+
+/* vehicles management */
+
+.vehicles-management table {
+    width: 95%;
+    margin: 30px auto;
+    font-size: 15px;
+    color: var(--head-color);
+    box-shadow: 1px 1px 26px #c9c9c9;
+}
+.vehicles-management table .head {
+    background-color: #051e47c9;
+    color: white;
+    font-size: 13px;
+}
+.vehicles-management table td, .vehicles-management table th {
+    border: solid 1px #c3c2c2;
+    padding : 6px ; 
+    text-align : center ; 
+}
+.vehicles-management td.id {
+    background-color: #d5d5d5;
+    color: #4b4b4b;
+}
+.vehicles-management td.img-cell {
+    width: 100px;
+}
+.vehicles-management td.img-cell img {
+    width: 100%;
+    border-radius: 6px;
+    border: solid white;
+}
+.vehicles-management .search-and-add {
+    position : relative ; 
+    display : flex ; 
+    align-items : center ; 
+}
+.vehicles-management .search-and-add input{
+    display: block;
+    border-radius: 20px;
+    width: 75%;
+    margin: 20px auto;
+    border: solid 1px #9a9a9a;
+    padding: 9px 16px;
+}
+.vehicles-management .search-and-add input:focus {
+    outline: none;
+}
+.vehicles-management .search-and-add i.search-icon {
+    position: absolute;
+    right: 204px;
+    top: 31px;
+    font-size: 20px;
+    color: #ffae53;
+    text-shadow: 1px 1px 1px #554b4b;
+    cursor: pointer;
+}
+.vehicles-management .search-and-add select {
+    width: fit-content;
+    position: absolute;
+    right: 120px;
+    top: 20px;
+    width: fit-content;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #d5d9e0;
+    color: black;
+    padding: 10px 5px;
+    font-size: 13px;
+    border: solid #474747;
+    font-weight: bold;
+    cursor: pointer;
+}
+.vehicles-management .search-and-add option {
+    background-color : white ; 
+    cursor : pointer ; 
+}
+.vehicles-management .search-and-add .show-all, .vehicles-management .search-and-add .add-vehicle {
+    border: solid 1px #aca2a2;
+    color: #1a1a1a;
+    background-color: var(--btn-color);
+    border-radius: 5px;
+    padding: 6px 8px;
+    box-shadow: 1px 1px 1px #404040;
+}
+.vehicles-management .search-and-add .show-all i, .vehicles-management .search-and-add .add-vehicle i {
+    color: var(--main-color);
+    margin-right: 4px;
+}
+
+
+/* employee management*/
+
+.employee-management nav {
+    display : flex ; 
+    align-items : center ; 
+    justify-content : space-between ; 
+}
+.employee-management button.show-all, .employee-management button.add-employee {
+    color: white;
+    background-color: var(--third-main-color);
+    border: none;
+    border-radius: 6px;
+    padding: 5px 7px;
+}
+.employee-management .search-and-show {
+    position : relative ; 
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+.employee-management .search-and-show input {
+    border: solid 1px #c7c7c7;
+    padding: 5px 7px;
+    font-size: 15px;
+    border-radius: 4px;
+}
+.employee-management .search-and-show i {
+    position: absolute;
+    top: 10px;
+    right: 93px;
+}
+.employee-management .search-and-show select {
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 7px;
+}
+.employee-management .search-and-show option {
+    background-color : white ; 
+    color : black ; 
+}
+.employee-management table {
+    width : 96% ;
+    margin : auto ; 
+}
+.employee-management table thead {
+    color : var(--main-color) ; 
+    font-weight : bold ; 
+    font-size : 15px ; 
+}
+/* end employee management*/
